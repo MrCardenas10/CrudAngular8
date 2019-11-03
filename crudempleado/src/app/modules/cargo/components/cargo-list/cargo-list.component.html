@@ -1,0 +1,35 @@
+<br><br>
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-7">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Cargo</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cargo of cargos$ | async">
+                    <td>{{cargo.idCargo}}</td>
+                    <td>{{cargo.nombre}}</td>
+                    <td>
+                        <button type="button" data-toggle="modal"
+                        data-target="#ModalEditar" class="btn btn-outline-secondary" (click)="cargarDatos(cargo.idCargo)">
+                            <i class="fas fa-user-edit"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-danger" (click)="deleteCargo(cargo.idCargo)">
+                            <i class="fas fa-user-times"></i>
+                        </button>
+                    </td> 
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-1"></div>
+</div>

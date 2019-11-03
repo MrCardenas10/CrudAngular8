@@ -1,0 +1,33 @@
+<div id="wrapper" class="active">  
+    <!-- Sidebar -->
+            <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul id="sidebar_menu" class="sidebar-nav">
+           <li class="sidebar-brand"><a id="menu-toggle">TATA</a></li>
+        </ul>
+        <ul class="sidebar-nav" id="sidebar">
+          <li routerLink="/home"><a><i class="fas fa-home"></i> Inicio</a></li>
+          <ul class="sidebar-nav" id="sidebar">
+            <li style="color:gray;" (click)="toggleMenus()">Gestion Empleado</li>
+            <ng-container *ngIf="toggleMenu1">
+              <li><a routerLink="empleado/empleado-create"> <i class="fas fa-users"></i> Crear Empleado</a></li>
+              <li><a routerLink="empleado/empleado-list"> <i class="fas fa-users"></i> Listar Empleado</a></li>
+            </ng-container>
+          </ul>
+          <ul class="sidebar-nav" id="sidebar">
+              <li style="color:gray;" (click)="toggleMenuss()">Gestion Cargos</li>
+              <ng-container *ngIf="toggleMenu2">
+                <li><a routerLink="cargo/cargo-create"> <i class="fas fa-users"></i> Crear Cargos</a></li>
+                <li><a routerLink="cargo/cargo-list"> <i class="fas fa-users"></i> Listar Cargos</a></li>
+              </ng-container>
+            </ul>
+            <ul class="sidebar-nav" id="sidebar">
+                <li style="color:gray;" (click)="toggleMenusss()">Gestion Proyectos</li>
+                <ng-container *ngIf="toggleMenu3">
+                  <li><a routerLink="proyecto/proyecto-create"> <i class="fas fa-users"></i> Crear Proyecto</a></li>
+                  <li><a routerLink="proyecto/proyecto-list"> <i class="fas fa-users"></i> Listar Proyecto</a></li>
+                </ng-container>
+              </ul>
+        </ul>
+      </div>
+    </div>

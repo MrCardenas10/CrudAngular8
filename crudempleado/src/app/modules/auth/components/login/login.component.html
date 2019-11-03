@@ -1,0 +1,47 @@
+<app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
+
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+<img src="/assets/images/logo.png" alt="Logo">
+    </div>
+    <div class="col-4"></div>
+</div>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <form [formGroup]="rForm" (ngSubmit)="login()">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" formControlName="email" class="form-control" id="email" [ngClass]="{ 'is-invalid': addForm.email.errors }"
+                    placeholder="Ej: hola@gmail.com">
+                <div *ngIf="addForm.email.invalid && (addForm.email.dirty || addForm.email.touched )" class="alert alert-danger">
+                    <div *ngIf="addForm.email.errors.required">
+                        Email is required.
+                    </div>
+                    <div *ngIf="addForm.email.errors.email">
+                        Email invalid.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone">Password</label>
+                <input type="phone" formControlName="phone" class="form-control" id="phone" [ngClass]="{ 'is-invalid': addForm.phone.errors }"
+                    placeholder="************">
+                <div *ngIf="addForm.phone.invalid && (addForm.phone.dirty || addForm.phone.touched )" class="alert alert-danger">
+                    <div *ngIf="addForm.phone.errors.required">
+                        phone is required.
+                    </div>
+                </div>
+            </div>
+            <button type="submit" [disabled]="rForm.invalid" class="btn btn-outline-primary col-lg-12">Ingresar</button>
+        </form>
+    </div>
+    <div class="col-4"></div>
+</div>
+<br>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4" style="color:blue">¿Olvidaste tu contraseña?</div>
+    <div class="col-4"></div>
+</div>

@@ -1,0 +1,80 @@
+{
+  "employees": [
+    {
+      "name": "Estiven",
+      "email": "cardenas@gmail.com",
+      "phone": "123123123",
+      "idCargo": "3",
+      "idProyecto": "1",
+      "id": 3
+    },
+    {
+      "name": "Cristian",
+      "email": "cristian.loca@amiguis.com",
+      "phone": "2222222",
+      "idCargo": "2",
+      "idProyecto": "3",
+      "id": 4
+    },
+    {
+      "name": "Karolina",
+      "email": "karito@celular.com",
+      "phone": "2231023",
+      "idCargo": "2",
+      "idProyecto": "2",
+      "id": 5
+    },
+    {
+      "name": "Ed Wizz",
+      "email": "Blond@weed.com",
+      "phone": "210210210",
+      "idCargo": "4",
+      "idProyecto": "4",
+      "id": 6
+    },
+    {
+      "name": "alberto",
+      "email": "estiven4040@tcs.com",
+      "phone": "12121212",
+      "idCargo": "4",
+      "idProyecto": "2",
+      "id": 8
+    }
+  ],
+  "cargos": [
+    {
+      "idCargo": 1,
+      "nombre": "Analista Requisitos"
+    },
+    {
+      "idCargo": 2,
+      "nombre": "Analista DB"
+    },
+    {
+      "idCargo": 3,
+      "nombre": "Desarrollador Front-End"
+    },
+    {
+      "idCargo": 4,
+      "nombre": "Desarrollador Back-End"
+    }
+  ],
+  "proyectos": [
+    {
+      "idProyecto": 1,
+      "nombre": "Avianca"
+    },
+    {
+      "idProyecto": 2,
+      "nombre": "Bancolombia Azurance"
+    },
+    {
+      "idProyecto": 3,
+      "nombre": "Bancolombia ITTO"
+    },
+    {
+      "idProyecto": 4,
+      "nombre": "TIGO/UNE"
+    }
+  ]
+}

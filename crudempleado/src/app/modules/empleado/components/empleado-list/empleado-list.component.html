@@ -1,0 +1,57 @@
+<br>
+<app-toasts aria-live="polite" aria-atomic="true"></app-toasts>
+
+<br>
+<div class="row">
+        <div class="col-3"></div>
+        <div class="col-8">
+            <div *ngIf="alerta" id="alerta" class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Well done!</h4>
+                <p>Se ah eliminado el empleado exitosamente.</p>
+            </div>
+        </div>
+        <div class="col-1"></div>
+    </div>
+<br>
+<br>
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-7">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Phone</th>
+                    <!-- <th scope="col">Cargo</th> -->
+                    <!-- <th scope="col">Proyecto</th> -->
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users$ | async">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone}}</td>
+                    <!-- <td>{{user.idCargo}}</td> -->
+                    <!-- <td>{{user.idProyecto}}</td> -->
+                    <td>
+                        <button type="button" data-toggle="modal" data-target="#ModalEditar" class="btn btn-outline-secondary" (click)="getUser(user.id)">
+                            <i class="fas fa-user-edit"></i>
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-danger" (click)="deleteUser(user.id)">
+                            <i class="fas fa-user-times"></i>
+                        </button>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-2"></div>
+</div>

@@ -1,0 +1,31 @@
+<br>
+<br>
+<br>
+<br>
+
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-7">
+        <form [formGroup]="rForm" (ngSubmit)="addCargo()">
+            <div class="form-group">
+                <label for="exampleInputPassword1">Nombre</label>
+                <input type="text" formControlName="nombre" class="form-control" [ngClass]="{ 'is-invalid': submitted && addForm.nombre.errors }"
+                    id="exampleInputPassword1" placeholder="Nombre">
+                <div *ngIf="addForm.nombre.invalid && (addForm.nombre.dirty || addForm.nombre.touched )" class="alert alert-danger">
+                    <div *ngIf="addForm.nombre.errors.required">
+                        Nombre is required.
+                    </div>
+                    <div *ngIf="addForm.nombre.errors.minlength">
+                        Nombre tiene que tener 6 letras
+                    </div>
+                    <div *ngIf="addForm.nombre.errors.maxlength">
+                        Nombre tiene que tener menos de 11 letras
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline-secondary" (click)="limpiar">Cancelar</button>
+            <button type="submit" class="btn btn-outline-primary">Agregar</button>
+        </form>
+    </div>
+    <div class="col-2"></div>
+</div>
