@@ -1,17 +1,28 @@
+// angular core
 import { Component, OnInit } from '@angular/core';
-import { EmpleadoService } from './../../services/empleado.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
+// services
+import { EmpleadoService } from './../../services/empleado.service';
+
+// actions
 import { TryGetCargos } from './../../../cargo/store/cargo.actions';
-import { Store } from '@ngrx/store';
 import { CreateEmployee, TryLoadEmployeesCargos, TryLoadEmployeesProyectos } from '../../store/empleado.actions';
+import { TryGetProyectos } from '../../../proyecto/store/proyecto.actions';
+
+// ngrx
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { getCargosListState } from './../../../cargo/store/cargo.selectors';
-import { Cargo } from '../../../cargo/interfaces/cargo.interface';
 import { getProyectosListState } from './../../../proyecto/store/proyecto.selectors';
-import { Proyecto } from '../../../proyecto/interfaces/proyecto.interface';
-import { TryGetProyectos } from '../../../proyecto/store/proyecto.actions';
-import { Router } from '@angular/router';
 import { getCargosEmployeesState, getProyectosEmployeesState } from '../../store/empleado.selectors';
+
+// interfaces
+import { Cargo } from '../../../cargo/interfaces/cargo.interface';
+import { Proyecto } from '../../../proyecto/interfaces/proyecto.interface';
+
+// dependencias
 import { ToastService } from '../../../../shared/services/toast.service';
 
 @Component({

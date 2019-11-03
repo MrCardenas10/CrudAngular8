@@ -1,12 +1,25 @@
+// angular core
 import { Component, OnInit } from '@angular/core';
-import { EmpleadoService } from './../../services/empleado.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Store } from '@ngrx/store';
-import { TryLoadEmployees, TryDeleteEmployee, CreateEmployee, UpdateEmployee, TryLoadEmployee, TryLoadEmployeesCargos, TryLoadEmployeesProyectos} from '../../store/empleado.actions';
-import { Empleado } from '../../interfaces/empleado.interface';
-import { Observable } from 'rxjs';
-import { getEmployeesListState } from '../../store/empleado.selectors';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+// servicios
+import { EmpleadoService } from './../../services/empleado.service';
+
+// ngrx
+import { Store } from '@ngrx/store';
+import { getEmployeesListState } from '../../store/empleado.selectors';
+
+// actions
+import { TryLoadEmployees, TryDeleteEmployee, CreateEmployee, UpdateEmployee, TryLoadEmployee, TryLoadEmployeesCargos, TryLoadEmployeesProyectos} from '../../store/empleado.actions';
+
+// interfaces
+import { Empleado } from '../../interfaces/empleado.interface';
+
+// rxjs
+import { Observable } from 'rxjs';
+
+// dependencias
 import { ToastService } from '../../../../shared/services/toast.service';
 
 @Component({
