@@ -1,15 +1,29 @@
+// angular core
 import { Component, OnInit } from '@angular/core';
-import { EmpleadoService } from './../../services/empleado.service';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+// servicios
+import { EmpleadoService } from './../../services/empleado.service';
+
+// ngrx
 import { Store } from '@ngrx/store';
 import { getEmployeeState, getProyectosEmployeesState, getCargosEmployeesState } from '../../store/empleado.selectors';
-import { UpdateEmployee, TryLoadEmployeesProyectos, TryLoadEmployeesCargos } from '../../store/empleado.actions';
-import { Router } from '@angular/router';
-import { getCargosListState } from '../../../cargo/store/cargo.selectors';
 import { getProyectosListState } from '../../../proyecto/store/proyecto.selectors';
+import { getCargosListState } from '../../../cargo/store/cargo.selectors';
+
+// actions
+import { UpdateEmployee, TryLoadEmployeesProyectos, TryLoadEmployeesCargos } from '../../store/empleado.actions';
+
+// rxjs
 import { Observable } from 'rxjs';
+
+// interfaces
 import { Cargo } from '../../../cargo/interfaces/cargo.interface';
 import { Proyecto } from '../../../proyecto/interfaces/proyecto.interface';
+
+
+// dependencias
 import { NotifyService } from '../../../../shared/services/notify.service';
 import { ToastService } from '../../../../shared/services/toast.service';
 

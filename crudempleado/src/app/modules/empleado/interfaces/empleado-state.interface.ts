@@ -1,3 +1,4 @@
+// interfaces
 import { Empleado } from "./empleado.interface";
 import { Cargo } from "../../cargo/interfaces/cargo.interface";
 import { Proyecto } from "../../proyecto/interfaces/proyecto.interface";
